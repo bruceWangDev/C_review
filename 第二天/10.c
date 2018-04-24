@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 计算阶乘
+// 计算阶乘的sum
 void factorial(int num){
 	int mul = 1, sum = 0;
 	for(int i = 1; i <= num; i++){

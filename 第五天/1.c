@@ -12,7 +12,7 @@ int lineAtSearch(int arr[], int len, int key){
 	return -1;
 } 
 
-// 二分法
+// 二分法 - 折半查找
 int binarySearch(int arr[], int len, int key){
 	int lh = 0;
 	int rh = len - 1;

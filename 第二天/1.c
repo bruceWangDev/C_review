@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 成功的安装的C语言的运行环境，但是美中不足在于终端一闪而过
+// 成功的安装sublime text3的C语言的运行环境，但是美中不足在于终端一闪而过
 // 1
 void exchange(int x, int y){
 	printf("before exchange\tx is %d\ty is %d\n", x, y);

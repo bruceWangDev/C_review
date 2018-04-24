@@ -1,6 +1,6 @@
-#include <stdio.h> // 标准输入输出库 stdio.h
+#include <stdio.h> // C语言标准输入输出库 stdio.h
 
-// 两个整数之和
+// 求两个整数之和
 int sum(int x,int y){
 	int result = x + y;
 	return result;
@@ -21,7 +21,7 @@ int max(int x,int y){
 	return x>y?x:y;
 }
 
-// 求a、b、c三个数的最大值
+// 求三个整数中的最大值
 int max3(int x, int y, int z){
 	int result;
 	int tmp;
@@ -41,7 +41,7 @@ int max3(int x, int y, int z){
 	return result;
 }
 
-// 求5！
+// 求5!
 int mul5(){
 	int result = 1;
 	for(int i = 1; i <= 5; i++){
@@ -50,7 +50,7 @@ int mul5(){
 	return result;
 }
 
-// 输入n,求n的阶乘
+// 求n的阶乘
 int mulNum(int n){
 	int result = 1;
 	for(int i = 1; i <= n; i++){
