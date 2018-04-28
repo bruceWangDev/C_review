@@ -37,7 +37,7 @@ void selectSort(int a[], int n){
 // insertSort
 void insertSort(int a[], int n){
 	int key, temp, beforeIndex;
-	for(int i = 1; i < n - 1; i++){
+	for(int i = 1; i < n; i++){
 		key = a[i];
 		beforeIndex = i - 1; // 前一个数的下标
 		while(beforeIndex >= 0 && a[beforeIndex] > key){
@@ -54,7 +54,7 @@ void shellSort(int a[], int n){
 	int temp;
 	for(int gap = n/2; gap > 0; gap /= 2){
 		for(int i = gap; i < n; i++){
-			for(int j = i - gap; j > 0 && a[j] > a[j + gap]; gap -= gap){
+			for(int j = i - gap; j >= 0 && a[j] > a[j + gap]; j -= gap){
 				temp = a[j];
 				a[j] = a[j + gap];
 				a[j + gap] = temp;
@@ -107,25 +107,25 @@ int main(){
 	getArr(arr, len);
 	printArr(arr, len);
 
-	printf("bubbleSort result is:\n");
-	bubbleSort(arr, len);
-	printArr(arr, len);
+	// printf("bubbleSort result is:\n");
+	// bubbleSort(arr, len);
+	// printArr(arr, len);
 
-	printf("selectSort result is:\n");
-	selectSort(arr, len);
-	printArr(arr, len);
+	// printf("selectSort result is:\n");
+	// selectSort(arr, len);
+	// printArr(arr, len);
 
-	printf("insertSort result is:\n");
-	insertSort(arr, len);
-	printArr(arr, len);
+	// printf("insertSort result is:\n");
+	// insertSort(arr, len);
+	// printArr(arr, len);
 
 	printf("shellSort result is:\n");
 	shellSort(arr, len);
 	printArr(arr, len);
 
-	printf("quickSort result is:\n");
-	quickSort(arr, 0, len - 1);
-	printArr(arr, len);
+	// printf("quickSort result is:\n");
+	// quickSort(arr, 0, len - 1);
+	// printArr(arr, len);
 
 	nowTime();
 

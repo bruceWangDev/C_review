@@ -51,11 +51,12 @@ void selectSort(int arr[], int n){
 void insertSort(int arr[], int n){
 	int key, index, temp;
 	// 假设第一个元素已经有序
-	for(int i = 1; i < n - 1; i++){
+	for(int i = 1; i < n; i++){
 		key = arr[i];
 		index = i - 1; // 前一个数的下标
 		while(index >= 0 && arr[index] > key){
 			arr[index + 1] = arr[index]; // 数组元素后移
+			index--;
 		}
 		arr[index + 1] = key;
 	}
@@ -64,8 +65,8 @@ void insertSort(int arr[], int n){
 void shellSort(int arr[], int n){
 	int temp;
 	for(int gap = n/2; gap > 0; gap /= 2){
-		for(int i = gap; i < n - 1; i++){
-			for(int j = i - gap; j > 0 && arr[j] > arr[j + gap]; gap -= gap){
+		for(int i = gap; i < n; i++){
+			for(int j = i - gap; j >= 0 && arr[j] > arr[j + gap]; j -= gap){
 				temp = arr[j];
 				arr[j] = arr[j + gap];
 				arr[j + gap] = temp;
@@ -112,20 +113,20 @@ int main(){
 	getArr(arr, len);
 	printArr(arr, len);
 
-	bubbleSort(arr, len);
-	printArr(arr, len);
+	// bubbleSort(arr, len);
+	// printArr(arr, len);
 
-	selectSort(arr, len);
-	printArr(arr, len);
+	// selectSort(arr, len);
+	// printArr(arr, len);
 
-	insertSort(arr, len);
-	printArr(arr, len);
+	// insertSort(arr, len);
+	// printArr(arr, len);
 
 	shellSort(arr, len);
 	printArr(arr, len);
 
-	quickSort(arr, 0, len - 1);
-	printArr(arr, len);
+	// quickSort(arr, 0, len - 1);
+	// printArr(arr, len);
 
 	return 0;
 }
